@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap');
+*{
+  padding : 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+body{
+  width: 100vw;
+  font-family: 'Quicksand', sans-serif;
+  /* user-select: none; */
+  overflow-x: hidden;
+  background-color: #141414;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: rgb(15, 14, 13);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #F04236;
+    border-radius: 100px;
+}
+
+a{text-decoration: none;color: white}
+
+li{list-style: none;}
+.btn-grp{
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+}
+.btn{
+  padding: 10px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 300ms;
+  cursor:pointer;
+}
+.btn:hover{
+  transform: translateY(-4px);
+}
+.btn:active{
+  transform: translateY(0px);
+}
+.btn-red{
+  background-color: #F04236;
+}
+.btn-grey{background-color: #000103}
+.btn p{margin-left: 10px}
+.scaleUp:hover{transform: scale(1.2);transition: 0.3s}
+
+.is-active{
+  position: relative;
+  color: #F04236
+}
+.is-active::before{
+  content: '';
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: -10px;
+  width: 110%;
+  height: 3px;
+  background-color: red;
+  transition: bottom 300ms;
+  transform: scale(1);
+  transition: 1s;
+  transition-property: all;
 }
